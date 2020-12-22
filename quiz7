@@ -1,0 +1,77 @@
+def satisfactory(file_path):
+    file = open(file_path, "r")
+    """
+    line_count = 0
+    for line in file:
+        if line != "\n":
+            line_count += 1
+    print(line_count)
+    """
+    st1 = file.readline()
+    st2 = file.readline()
+    st3 = file.readline()
+    st4 = file.readline()
+    st5 = file.readline()
+    st_1 = []
+    st_2 = []
+    st_3 = []
+    st_4 = []
+    st_5 = []
+    for i in st1.split():
+        st_1.append(float(i))
+    for i in st2.split():
+        st_2.append(float(i))
+    for i in st3.split():
+        st_3.append(float(i))
+    for i in st4.split():
+        st_4.append(float(i))
+    for i in st5.split():
+        st_5.append(float(i))
+
+    successful_students=0
+
+    quizzes_1=(st_1[0]+st_1[1])*0.1
+    mt_1=(st_1[2]+st_1[3])*0.2
+    final_1=st_1[4]*0.4
+    point_1=quizzes_1+mt_1+final_1
+
+    if point_1 >=55:
+        successful_students+=1
+
+    quizzes_2 = (st_2[0] + st_2[1]) * 0.1
+    mt_2 = (st_2[2] + st_2[3]) * 0.2
+    final_2= st_2[4] * 0.4
+    point_2= quizzes_2 + mt_2 + final_2
+
+    if point_2 >=55:
+        successful_students+=1
+
+    quizzes_3 = (st_3[0] + st_3[1]) * 0.1
+    mt_3 = (st_3[2] + st_3[3]) * 0.2
+    final_3 = st_3[4] * 0.4
+    point_3= quizzes_3 + mt_3 + final_3
+
+    if point_3 >=55:
+        successful_students+=1
+
+    quizzes_4 = (st_4[0] + st_4[1]) * 0.1
+    mt_4 = (st_4[2] + st_4[3]) * 0.2
+    final_4 = st_4[4] * 0.4
+    point_4= quizzes_4 + mt_4 + final_4
+
+    if point_4 >=55:
+        successful_students+=1
+
+    quizzes_5 = (st_5[0] + st_5[1]) * 0.1
+    mt_5 = (st_5[2] + st_5[3]) * 0.2
+    final_5 = st_5[4] * 0.4
+    point_5 = quizzes_5 + mt_5 + final_5
+
+    if point_5 >=55:
+        successful_students+=1
+    file.close()
+    print(successful_students)
+satisfactory("input.txt")
+
+
+
